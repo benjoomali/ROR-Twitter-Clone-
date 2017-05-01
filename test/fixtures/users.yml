@@ -1,5 +1,28 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 john:
-  name: John Example
+  name: John Smith
   email: john@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true 
+  
+dean: 
+  name: Dean Pelton
+  email: dean@greendalecommunitycollege.org 
+  password_digest: <%= User.digest('password') %>
+  
+jeff: 
+  name: Jeff Winger
+  email: jwinger@greendalecommunitycollege.org
+  password_digest: <%= User.digest('password') %>
+  
+britta:
+  name: Britta Perry
+  email: bperry@greendalecommunitycollege.org 
+  password_digest: <%= User.digest('password') %>
+  
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@greendalecommunitycollege.org" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
