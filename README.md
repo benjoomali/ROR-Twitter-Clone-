@@ -1,24 +1,14 @@
-# README
+# Bitter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was built while learning the Ruby on Rails Tutorial by Michael Hartl.
 
-Things you may want to cover:
+Bitter was built using Test-Driven-Development and has a fully developed test environment. 
 
-* Ruby version
+Features of the Application:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* User Sign Up
+* Forgot Password
+* Remember Me  
+* Account Activation Email with Send Grid 
+* Pagination User Index
+* Beets - Posts
