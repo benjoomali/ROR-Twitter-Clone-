@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :rants, dependent: :destroy #destroy rants when user destroyed
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email 
   before_create :create_activation_digest
@@ -68,6 +69,12 @@ class User < ApplicationRecord
   #return true if password reset has expired
   def password_reset_expired?
     reset_sent_at < 2.hours.ago #earlier than
+  end 
+  
+  #here we implement a feed
+  def feed 
+    #? ensures the id is escaped before SQL query
+    Rant.where("user_id = ?", id)
   end 
   
   private

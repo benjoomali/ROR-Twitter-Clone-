@@ -10,5 +10,15 @@
       <p>Updated at: <%= @user.updated_at %></p>
     </section>
   </aside>
+  
+  <div class ="col-md-8">
+    <% if @user.rants.any? %>
+      <h3>Rants (<%= @user.rants.count %>)</h3>
+      <ol class="rants">
+        <%= render @rants %>
+      </ol>
+      <%= will_paginate @rants %>
+    <% end %>
+  </div>
 </div>
 
