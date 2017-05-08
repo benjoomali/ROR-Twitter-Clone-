@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  follower: dean
+  followed: jeff
+
+two:
+  follower: dean
+  followed: britta
+
+three:
+  follower: jeff
+  followed: dean
+
+four:
+  follower: annie
+  followed: dean
